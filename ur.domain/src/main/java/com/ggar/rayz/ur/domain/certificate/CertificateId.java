@@ -1,9 +1,8 @@
-package com.ggar.rayz.ur.domain;
+package com.ggar.rayz.ur.domain.certificate;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
@@ -11,14 +10,6 @@ import java.util.UUID;
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @With
-public class Account {
-
+public class CertificateId {
 	UUID id;
-	Username username;
-	Email email;
-	PasswordHash passwordHash;
-	LocalDate created;
-	UserRole role;
-	AccountState state;
-
 }

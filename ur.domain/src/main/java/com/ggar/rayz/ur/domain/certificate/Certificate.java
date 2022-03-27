@@ -1,8 +1,10 @@
-package com.ggar.rayz.ur.domain;
+package com.ggar.rayz.ur.domain.certificate;
 
+import com.ggar.rayz.ur.domain.account.AccountId;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -12,8 +14,10 @@ import java.util.UUID;
 @With
 public class Certificate {
 
-	UUID id;
-	String content;
+	CertificateId certificateId;
 	CertificateType certificateType;
+	CertificateAlgorithm certificateAlgorithm;
+	List<CertificateKey> certificateKeyList;
+	AccountId accountId;
 
 }

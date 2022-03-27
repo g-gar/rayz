@@ -1,4 +1,4 @@
-package com.ggar.rayz.ur.domain;
+package com.ggar.rayz.ur.domain.account;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -8,10 +8,13 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public enum CertificateType {
+public enum AccountState {
 
-	PERSONAL(0),
-	SHARED(1);
+	INVALID(null),
+	CREATED(0),
+	ENABLED(1),
+	DISABLED(2),
+	DELETED(3);
 
 	Integer value;
 }

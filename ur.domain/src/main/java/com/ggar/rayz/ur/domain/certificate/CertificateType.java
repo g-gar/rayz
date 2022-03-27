@@ -1,17 +1,17 @@
-package com.ggar.rayz.ur.domain;
+package com.ggar.rayz.ur.domain.certificate;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
 @Getter
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public enum UserRole {
+public enum CertificateType {
 
-	ADMINISTRATOR,
-	NORMAL;
+	ASYMMETRIC(0),
+	SYMMETRIC(1);
 
+	Integer value;
 }

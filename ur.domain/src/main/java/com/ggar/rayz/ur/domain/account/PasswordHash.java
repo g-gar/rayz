@@ -1,4 +1,4 @@
-package com.ggar.rayz.ur.domain;
+package com.ggar.rayz.ur.domain.account;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -8,6 +8,6 @@ import lombok.experimental.FieldDefaults;
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @With
-public class Username {
-	String value;
+public class PasswordHash {
+	Long value;
 }

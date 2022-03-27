@@ -1,4 +1,4 @@
-package com.ggar.rayz.ur.domain;
+package com.ggar.rayz.ur.domain.certificate;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -8,6 +8,8 @@ import lombok.experimental.FieldDefaults;
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @With
-public class Email {
+public class CertificateKey {
+
 	String value;
+
 }
