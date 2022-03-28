@@ -4,7 +4,6 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -18,7 +17,7 @@ public class Account {
 	Email email;
 	PasswordHash passwordHash;
 	LocalDate created;
-	UserRole role;
+	AccountType role;
 	AccountState state;
 
 }

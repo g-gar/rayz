@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public interface RayzUR {
 
-	public Account create(Username username, Password password, Email email, UserRole userRole);
+	public Account create(Username username, Password password, Email email, AccountType accountType);
 
 	public Certificate assignCertificate(UUID accountId, Certificate certificate);
 
