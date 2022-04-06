@@ -8,8 +8,10 @@
     <artifactId>rayz-UR</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>ur.domain</module>
-        <module>ur.core</module>
+        <module>account</module>
+        <module>common</module>
+        <module>certificate</module>
+        <module>session</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -18,12 +20,4 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-        </dependency>
-    </dependencies>
 </project>
