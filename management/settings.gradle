@@ -1,4 +1,4 @@
 rootProject.name = 'com.ggar.rayz.management'
 
-include 'core-model'
+include 'domain'
 include 'core'

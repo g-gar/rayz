@@ -1,7 +1,7 @@
 package com.ggar.rayz.management.core.usecase.account;
 
 import com.ggar.rayz.management.core.DateService;
-import com.ggar.rayz.management.core.model.*;
+import com.ggar.rayz.management.core.domain.model.*;
 import com.ggar.rayz.management.core.port.account.CreateAccountPort;
 import com.ggar.rayz.management.core.port.password.HashPasswordPort;
 import lombok.NonNull;
