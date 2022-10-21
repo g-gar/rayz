@@ -6,7 +6,7 @@ repositories {
 
 dependencies {
 
-	implementation project(":core-model")
+	implementation project(":domain")
 
 	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
 	annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
