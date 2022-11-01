@@ -1,5 +1,6 @@
-package com.ggar.rayz.management.core.domain.model;
+package com.ggar.rayz.management.core.domain.model.account;
 
+import com.ggar.rayz.management.core.domain.model.file.FileStorage;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -19,6 +20,5 @@ public class Account {
 	OffsetDateTime created;
 	AccountType role;
 	AccountState state;
-	FileStorage fileStorage;
 
 }

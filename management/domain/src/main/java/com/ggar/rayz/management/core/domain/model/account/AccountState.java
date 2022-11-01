@@ -1,4 +1,4 @@
-package com.ggar.rayz.management.core.domain.model;
+package com.ggar.rayz.management.core.domain.model.account;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

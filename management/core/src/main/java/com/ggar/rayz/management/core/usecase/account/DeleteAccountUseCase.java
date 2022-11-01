@@ -1,8 +1,8 @@
 package com.ggar.rayz.management.core.usecase.account;
 
-import com.ggar.rayz.management.core.domain.model.Account;
-import com.ggar.rayz.management.core.domain.model.AccountId;
-import com.ggar.rayz.management.core.domain.model.AccountState;
+import com.ggar.rayz.management.core.domain.model.account.Account;
+import com.ggar.rayz.management.core.domain.model.account.AccountId;
+import com.ggar.rayz.management.core.domain.model.account.AccountState;
 import com.ggar.rayz.management.core.port.account.FindAccountByIdPort;
 import com.ggar.rayz.management.core.port.account.UpdateAccountPort;
 import lombok.NonNull;
