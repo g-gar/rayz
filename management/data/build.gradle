@@ -1,0 +1,44 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	ext {
+		springBootVersion = '2.7.4'
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version "$springBootVersion"
+}
+
+ext {
+	springBootVersion = '2.7.4'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation project(":domain")
+
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: "$springBootVersion"
+}
+
+bootJar {
+	enabled = false
+}

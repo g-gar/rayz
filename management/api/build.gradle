@@ -1,0 +1,62 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		maven { url "https://repo1.maven.org/maven2" }
+	}
+	dependencies {
+		classpath "org.openapitools:openapi-generator-gradle-plugin:6.2.0"
+	}
+	ext {
+		springBootVersion = '2.7.4'
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version "$springBootVersion"
+}
+
+ext {
+	springBootVersion = '2.7.4'
+}
+
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.openapi.generator'
+
+compileJava.dependsOn tasks.openApiGenerate
+
+repositories {
+	mavenCentral()
+}
+
+openApiGenerate {
+	generatorName = "spring"
+	inputSpec = "$projectDir/src/main/resources/openapi.yaml".toString()
+	outputDir = "$buildDir/generated".toString()
+	apiPackage = "com.ggar.rayz.management.api"
+	invokerPackage = "com.ggar.rayz.management.api.invoker"
+	modelPackage = "com.ggar.rayz.management.api.model"
+	configOptions = [
+		dateLibrary: "java8",
+		additionalModelTypeAnnotations: "@lombok.Builder\n@lombok.With",
+		withXml: "true",
+		delegatePattern: "true"
+	]
+}
+
+dependencies {
+	implementation project(":core")
+	implementation project(":data")
+
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: "$springBootVersion"
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "$springBootVersion"
+}
