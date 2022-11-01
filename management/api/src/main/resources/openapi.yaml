@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+paths:
+  /accounts/{accountId}:
+    get:
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Return account info
+          content:
+            application/json:
+              schema:
+                $ref: ''#/components/schemas/account'
+
+components:
+  schemas:
+    account:
+      properties:
+        id:
+          type: string
+          format: uuid
+        username:
+          type: string

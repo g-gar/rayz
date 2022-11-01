@@ -1,0 +1,6 @@
+rootProject.name = 'com.ggar.rayz.management'
+
+include 'domain'
+include 'core'
+include 'data'
+include 'api'
