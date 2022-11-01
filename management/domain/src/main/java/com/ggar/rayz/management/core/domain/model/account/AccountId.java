@@ -3,21 +3,16 @@ package com.ggar.rayz.management.core.domain.model;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.time.OffsetDateTime;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @With
-public class Account {
+public class AccountId {
 
-	AccountId id;
-	Username username;
-	Email email;
-	PasswordHash passwordHash;
-	OffsetDateTime created;
-	AccountType role;
-	AccountState state;
+	@Builder.Default
+	UUID value = UUID.randomUUID();
 
 }
